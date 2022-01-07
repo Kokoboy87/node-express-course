@@ -1,7 +1,7 @@
 const express = require('express');
 const res = require('express/lib/response');
 const app = express();
-const bodyParser = require('body-parse');
+const bodyParser = require('body-parser');
 
 app.use(bodyParser.json());
 
@@ -32,7 +32,7 @@ app.post('/login', function (req, res) {
 
 	// This should come from the database
 	const mockUsername = 'billyGoat';
-	const mockPassword = 'SuperSecret';
+	const mockPassword = 'superSecret';
 
 	if (username === mockUsername && password === mockPassword) {
 		// In practice, use JSON web token sing method here to make an encrypted token
